@@ -8,7 +8,7 @@ const wrapperStyle = css`
     width: 100vw;
     height: 100vh;
     background-image: url(${firstImage});
-    background-size: contain;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 `;

@@ -1,15 +1,14 @@
 /** @jsxImportSource @emotion/react */
 
 import React, { useEffect, useState } from "react";
-import { css, keyframes } from "@emotion/react";
-import { firstImage, mainImage } from "./images/images";
+import { css } from "@emotion/react";
 import FirstImage from "./components/FirstImage";
 import MainImage from "./components/MainImage";
+import Textarea from "./components/Textarea";
 
 const wrapperStyle = css`
     width: 100vw;
     height: 100vh;
-    overflow: hidden;
     position: relative;
 `;
 
