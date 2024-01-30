@@ -39,6 +39,7 @@ const imageWrapperStyle = css`
         resize: none;
         width: 70%;
         height: 70%;
+        outline: none;
     }
 `;
 
@@ -57,6 +58,7 @@ const Textarea = () => {
                     <span className="send-message">MESSAGE</span>
                 </div>
                 <textarea
+                    maxLength={15}
                     className="text-area"
                     placeholder={placeholder}></textarea>
             </div>
