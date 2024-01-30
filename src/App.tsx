@@ -1,26 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+/** @jsxImportSource @emotion/react */
+
+import React, { useEffect, useState } from "react";
+import { css, keyframes } from "@emotion/react";
+import { firstImage, mainImage } from "./images/images";
+import FirstImage from "./components/FirstImage";
+import MainImage from "./components/MainImage";
+
+const wrapperStyle = css`
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+`;
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [isChangeComponent, setIsChangeComponent] = useState(false);
+
+    useEffect(() => {
+        const timeoutId = setTimeout(() => {
+            setIsChangeComponent(true);
+        }, 2000);
+
+        return () => clearTimeout(timeoutId);
+    }, []);
+
+    return (
+        <div css={wrapperStyle}>
+            <div>{!isChangeComponent ? <FirstImage /> : <MainImage />}</div>
+        </div>
+    );
 }
 
 export default App;
