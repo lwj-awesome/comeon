@@ -6,26 +6,20 @@ import { mainImage } from "../images/images";
 import Textarea from "./Textarea";
 
 const wrapperStyle = css`
-    width: 100vw;
-    height: 100vh;
     background-image: url(${mainImage});
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
-`;
-
-const textAreaWrapperStyle = css`
-    z-index: 99;
     width: 100vw;
     height: 100vh;
+    overflow: hidden;
     display: flex;
+    justify-content: center;
 `;
+
 function MainImage() {
     return (
-        <div css={[wrapperStyle]}>
-            <div css={textAreaWrapperStyle}>
-                <Textarea />
-            </div>
+        <div css={wrapperStyle}>
+            <Textarea />
         </div>
     );
 }

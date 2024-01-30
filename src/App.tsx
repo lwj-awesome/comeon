@@ -4,12 +4,10 @@ import React, { useEffect, useState } from "react";
 import { css } from "@emotion/react";
 import FirstImage from "./components/FirstImage";
 import MainImage from "./components/MainImage";
-import Textarea from "./components/Textarea";
 
 const wrapperStyle = css`
-    width: 100vw;
-    height: 100vh;
-    position: relative;
+    width: 100%;
+    height: 100%;
 `;
 
 function App() {
@@ -25,7 +23,7 @@ function App() {
 
     return (
         <div css={wrapperStyle}>
-            <div>{!isChangeComponent ? <FirstImage /> : <MainImage />}</div>
+            {!isChangeComponent ? <FirstImage /> : <MainImage />}
         </div>
     );
 }

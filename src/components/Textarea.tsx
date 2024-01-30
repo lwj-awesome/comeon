@@ -6,10 +6,11 @@ import { Image_InputField, Image_IconSend } from "../images/images";
 
 const imageWrapperStyle = css`
     .image-container {
+        top: 25%;
+        left: 10%;
         position: relative;
         display: inline-block;
     }
-
     .input-image {
         width: 80%;
         height: 80%;
